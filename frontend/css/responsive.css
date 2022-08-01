@@ -1,0 +1,382 @@
+/* ====================================
+            Extra Small Device
+======================================== */
+@media (min-width:320px) and (max-width:575px) {
+    .title p{
+        padding: 0;
+        font-size: 12px;
+    }
+    .title h2 {
+        font-size: 20px;
+        margin-top: 12px;
+    }
+    .prev{
+        top: -18px;
+        right: 0;
+    }
+    .next{
+        top: -18px;
+        left: 0;
+    }
+     /* nav bar */
+   
+    nav .navbar-toggler:focus{
+        outline: none;
+        box-shadow: none;
+    }
+    nav .navbar-toggler-icon img{
+        width: 100%;
+    }
+    nav ul{
+        text-align: center;
+        padding: 25px 0;
+        border-radius: 15px;
+    }
+    nav ul li a{
+        color: #191919 !important;
+    }
+    nav ul li a:hover{
+        color: #974645 !important;
+        box-shadow: none;
+
+    }
+    nav .hire__me{
+        text-align: center;
+    }
+    .fixed__menu .hire__me a:hover{
+        color: #974645;
+        
+    }
+
+    /* banner section */
+    #banner__section{
+        text-align: center;
+        padding-top: 100px;
+    }
+    #banner__section .banner__txt h4 {
+        font-size: 32px;
+        margin-top: 15px;
+        font-weight: 600;
+    }
+    #banner__section .banner__txt h3 {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+    #banner__section .banner__txt p{
+        font-size: 14px;
+    }
+    #banner__section .banner__img{
+        display: none;
+    }
+    .project::after {
+        left: -4%;
+    }
+    #banner__section .banner__txt .download a {
+        font-size: 14px;
+    }
+    /* service section */
+    #services__section .service h3{
+        font-size: 18px;
+    }
+    #services__section .service p{
+        font-size: 14px;
+    }
+    #services__section .service a img{
+        width: 40%;
+    }
+    #services__section .service .svc__icon img{
+        width: 60px;
+    }
+    /* resume section */
+    #resume__section h3 {
+        font-size: 28px;
+    }
+    #resume__section .resume__card h4{
+        font-size: 20px;
+    }
+    #resume__section .resume__card h6{
+        font-size: 14px;
+    }
+    #hire__me__section h4{
+        margin-bottom: 40px;
+    }
+    .hire__option{
+        margin-bottom: 25px;
+    }
+    .hire__option a:hover:after{
+        bottom: -10px;
+     }
+    #testimonial__section{
+        padding: 0;
+    }
+    .testi__symble{
+        display: none;
+    }
+    #testimonial__section .testimonial__txt p{
+        font-size: 13px;
+        font-weight: 300;
+    }
+    .testi__text__slider::after{
+        display: none;
+    }
+}
+
+/* ====================================
+            Small Device
+======================================== */
+@media (min-width:576px) and (max-width:767px) {
+    .title p{
+        padding: 0;
+        font-size: 12px;
+    }
+    .title h2 {
+        font-size: 20px;
+        margin-top: 12px;
+    }
+    .prev{
+        top: -18px;
+        right: 0;
+    }
+    .next{
+        top: -18px;
+        left: 0;
+    }
+     /* nav bar */
+   
+    nav .navbar-toggler:focus{
+        outline: none;
+        box-shadow: none;
+    }
+    nav .navbar-toggler-icon img{
+        width: 100%;
+    }
+    nav ul{
+        text-align: center;
+        padding: 25px 0;
+        border-radius: 15px;
+    }
+    nav ul li a{
+        color: #191919 !important;
+    }
+    nav ul li a:hover{
+        color: #974645 !important;
+        box-shadow: none;
+
+    }
+    nav .hire__me{
+        text-align: center;
+    }
+    .fixed__menu .hire__me a:hover{
+        color: #974645;
+        
+    }
+
+    /* banner section */
+    #banner__section{
+        text-align: center;
+        padding-top: 100px;
+    }
+    #banner__section .banner__txt h4 {
+        font-size: 32px;
+        margin-top: 15px;
+        font-weight: 600;
+    }
+    #banner__section .banner__txt h3 {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+    #banner__section .banner__txt p{
+        font-size: 14px;
+    }
+    #banner__section .banner__img{
+        display: none;
+    }
+    .project::after {
+        left: -4%;
+    }
+    #banner__section .banner__txt .download a {
+        font-size: 14px;
+    }
+    /* service section */
+    #services__section .service h3{
+        font-size: 18px;
+    }
+    #services__section .service p{
+        font-size: 14px;
+    }
+    #services__section .service a img{
+        width: 30%;
+    }
+    #services__section .service .svc__icon img{
+        width: 50px;
+        margin-bottom: 6px;
+    }
+    /* resume section */
+    #resume__section h3 {
+        font-size: 28px;
+    }
+    #resume__section .resume__card h4{
+        font-size: 20px;
+    }
+    #resume__section .resume__card h6{
+        font-size: 14px;
+    }
+    #hire__me__section h4{
+        margin-bottom: 40px;
+    }
+    .hire__option{
+        margin-bottom: 35px;
+    }
+    #testimonial__section{
+        padding: 0;
+    }
+    .testi__symble{
+        display: none;
+    }
+    #testimonial__section .testimonial__txt p{
+        font-size: 13px;
+        font-weight: 300;
+    }
+    .testi__text__slider::after{
+        display: none;
+    }
+}
+
+/* ====================================
+            medium Device
+======================================== */
+@media (min-width:768px) and (max-width:991px) {
+    .title p{
+        padding: 0;
+        font-size: 12px;
+    }
+    .title h2 {
+        font-size: 20px;
+        margin-top: 12px;
+    }
+    .prev{
+        top: -18px;
+        right: 35%;
+    }
+    .next{
+        top: -18px;
+        left: 35%;
+    }
+     /* nav bar */
+   
+    nav .navbar-toggler:focus{
+        outline: none;
+        box-shadow: none;
+    }
+    nav .navbar-toggler-icon img{
+        width: 100%;
+    }
+    nav ul{
+        text-align: center;
+        padding: 25px 0;
+        border-radius: 15px;
+    }
+    nav ul li a{
+        color: #191919 !important;
+        font-size: 16px;
+    }
+    nav ul li a:hover{
+        color: #974645 !important;
+        box-shadow: none;
+
+    }
+    nav .hire__me{
+        text-align: center;
+    }
+    .fixed__menu .hire__me a:hover{
+        color: #974645;
+        
+    }
+
+    /* banner section */
+    #banner__section{
+        text-align: center;
+        padding-top: 100px;
+    }
+    #banner__section .banner__txt h4 {
+        font-size: 32px;
+        margin-top: 15px;
+        font-weight: 600;
+    }
+    #banner__section .banner__txt h3 {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+    #banner__section .banner__txt p{
+        font-size: 14px;
+    }
+    #banner__section .banner__img{
+        display: none;
+    }
+    .project::after {
+        left: -4%;
+    }
+    #banner__section .banner__txt .download a {
+        font-size: 14px;
+    }
+    /* service section */
+    #services__section .service h3{
+        font-size: 22px;
+    }
+    #services__section .service p{
+        font-size: 16px;
+    }
+    #services__section .service a img{
+        width: 30%;
+    }
+    #services__section .service .svc__icon img{
+        width: 60px;
+        margin-bottom: 6px;
+    }
+    #portfolio__section ul li{
+        font-size: 14px;
+    }
+    /* resume section */
+    #resume__section h3 {
+        font-size: 32px;
+    }
+    #resume__section .resume__card h4{
+        font-size: 22px;
+    }
+    #resume__section .resume__card h6{
+        font-size: 16px;
+    }
+    #hire__me__section h4{
+        margin-bottom: 40px;
+    }
+    .hire__option{
+        margin-bottom: 35px;
+    }
+    #testimonial__section{
+        padding: 0;
+    }
+    .testi__symble{
+        display: none;
+    }
+    #testimonial__section .testimonial__txt p{
+        font-size: 13px;
+        font-weight: 300;
+    }
+}
+
+
+/* ====================================
+            large Device
+======================================== */
+@media (min-width:992px) and (max-width:1200px) {
+
+     /* nav bar */
+    nav ul li a{
+        font-size: 12px;
+    }
+    nav .hire__me a {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+
+}
