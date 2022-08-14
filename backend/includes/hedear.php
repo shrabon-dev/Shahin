@@ -8,6 +8,40 @@ if(!isset($_SESSION['access'])){
 $current_page = explode('/',$_SERVER['PHP_SELF']);
 $current_page = end($current_page);
 
+require_once "../includes/db.php";
+
+$owner_image_query = "SELECT settings_value FROM settings WHERE settings_name='owner_photo'";
+$owner_image=  mysqli_fetch_assoc(mysqli_query($db_connect,$owner_image_query));
+
+$owner_name_query = "SELECT settings_value FROM settings WHERE settings_name='owner_name'";
+$owner_name =  mysqli_fetch_assoc(mysqli_query($db_connect,$owner_name_query));
+
+
+// list query start
+
+$services_list_query = "SELECT * FROM services WHERE service_delete='no'";
+$service_lists = mysqli_query($db_connect,$services_list_query);
+
+$skill_list_query = "SELECT * FROM skills WHERE skill_delete='no'";
+$skill_lists = mysqli_query($db_connect,$skill_list_query);
+
+$blog_list_query = "SELECT * FROM blogs WHERE blog_delete='no'";
+$blog_lists = mysqli_query($db_connect,$blog_list_query);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -66,7 +100,7 @@ $current_page = end($current_page);
             <!-- Navbar Header Start -->
             <div class="navbar--header">
                 <!-- Logo Start -->
-                <a href="index.html" class="logo">
+                <a href="../pages/admin.php" class="logo">
                     <img src="../../assets/img/logo.png" alt="">
                 </a>
                 <!-- Logo End -->
@@ -92,14 +126,14 @@ $current_page = end($current_page);
         <aside class="sidebar" data-trigger="scrollbar">
             <!-- Sidebar Profile Start -->
             <div class="sidebar--profile">
-                <div class="profile--img">
-                    <a href="profile.html">
-                        <img src="../../assets/img/profile.jpg" alt="profile.jpg" class="rounded-circle">
-                    </a>
+                <div  style="width: 120px !important; margin: 0 auto;">
+                
+                        <img style="width: 100px !important;height:100px !important;border-radius:50%;display:block" src="../uploads/banner_img/<?=$owner_image['settings_value']?>" alt="<?=$owner_image['settings_value']?>">
+            
                 </div>
 
                 <div class="profile--name">
-                    <a href="profile.html" class="btn-link">Shahinur Islam</a>
+                    <a href="profile.html" class="btn-link"><?=$owner_name['settings_value']?></a>
                 </div>
 
                 <div class="profile--nav">
@@ -135,30 +169,29 @@ $current_page = end($current_page);
                     <li>
                         <ul>
                             <li class="active">
-                                <a href="index.html">
+                                <a href="../pages/admin.php">
                                     <i class="fa fa-home"></i>
                                     <span>Dashboard</span>
                                 </a>
                             </li>
-                            <li>
+                            <li class=" is-dropdown">
                                 <a href="#">
-                                    <i class="fa fa-shopping-cart"></i>
-                                    <span>Ecommerce</span>
+                                <i class="fas fa-list-ul"></i>
+                                    <span>All List & Update</span>
                                 </a>
 
                                 <ul>
-                                    <li><a href="ecommerce.html">Dashboard</a></li>
-                                    <li><a href="products.html">Products</a></li>
-                                    <li><a href="products-edit.html">Edit Products</a></li>
-                                    <li><a href="orders.html">Orders</a></li>
-                                    <li><a href="order-view.html">Order View</a></li>
+                                <li><a href="../pages/services_list.php">Services List</a></li>
+                                <li><a href="../pages/resume_list.php">Resume List</a></li>
+                                <li><a href="../pages/blog_list.php">Blog List</a></li>
+                                <li><a href="../pages/testimonial_list.php">Testimonial List</a></li>
                                 </ul>
                             </li>
                         </ul>
                     </li>
 
                     <li>
-                        <a href="#">Layouts</a>
+                        <a href="#">Edit Sections</a>
 
                         <ul>
                             <li>
@@ -172,6 +205,8 @@ $current_page = end($current_page);
                                     <li><a href="../pages/skill_section.php">Skill</a></li>
                                     <li><a href="../pages/about_section.php">About</a></li>
                                     <li><a href="../pages/testimonial_section.php">Testimonial</a></li>
+                                    <li><a href="../pages/blog_section.php">Blog's</a></li>
+                                    <li><a href="../pages/settings.php">Settings</a></li>
                                 </ul>
                             </li>
                             <li>
@@ -183,122 +218,6 @@ $current_page = end($current_page);
                         </ul>
                     </li>
 
-                    <li>
-                        <a href="#">Components</a>
-
-                        <ul>
-                            <li>
-                                <a href="#">
-                                    <i class="far fa-newspaper"></i>
-                                    <span>UI Elements</span>
-                                </a>
-
-                                <ul>
-                                    <li><a href="buttons.html">Buttons</a></li>
-                                    <li><a href="pagination.html">Pagination</a></li>
-                                    <li><a href="progress-bars.html">Progress Bars</a></li>
-                                    <li><a href="tabs-accordions.html">Tabs &amp; Accordions</a></li>
-                                    <li><a href="modals.html">Modals</a></li>
-                                    <li><a href="ui-slider.html">UI Slider</a></li>
-                                    <li><a href="sweet-alerts.html">Sweet Alerts</a></li>
-                                    <li><a href="timeline.html">Timeline</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fab fa-wpforms"></i>
-                                    <span>Form</span>
-                                </a>
-
-                                <ul>
-                                    <li><a href="form-elements.html">Form Elements</a></li>
-                                    <li><a href="form-wizard.html">Form Wizard</a></li>
-                                    <li><a href="dropzone.html">Dropzone</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li>
-                        <a href="#">Apps and Charts</a>
-
-                        <ul>
-                            <li>
-                                <a href="#">
-                                    <i class="far fa-envelope"></i>
-                                    <span>Mailbox</span>
-                                </a>
-
-                                <ul>
-                                    <li><a href="mailbox_inbox.html">Inbox</a></li>
-                                    <li><a href="mailbox_compose.html">Compose</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="calendar.html">
-                                    <i class="far fa-calendar-alt"></i>
-                                    <span>Calendar</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="chat.html">
-                                    <i class="far fa-comments"></i>
-                                    <span>Chat</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="contacts.html">
-                                    <i class="far fa-address-book"></i>
-                                    <span>Contacts</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="notes.html">
-                                    <i class="far fa-sticky-note"></i>
-                                    <span>Notes</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="todo-list.html">
-                                    <i class="fa fa-tasks"></i>
-                                    <span>Todo List</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="search-results.html">
-                                    <i class="fa fa-search"></i>
-                                    <span>Search Results</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li>
-                        <a href="#">Extra</a>
-
-                        <ul>
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-file"></i>
-                                    <span>Extra Pages</span>
-                                </a>
-
-                                <ul>
-                                    <li><a href="pricing-tables.html">Pricing Tables</a></li>
-                                    <li><a href="profile.html">Profile</a></li>
-                                    <li><a href="invoice.html">Invoice</a></li>
-                                    <li><a href="login.html">Login</a></li>
-                                    <li><a href="register.html">Register</a></li>
-                                    <li><a href="forgot-password.html">Forgot Password</a></li>
-                                    <li><a href="lock-screen.html">Lock Screen</a></li>
-                                    <li><a href="404.html">404 Error</a></li>
-                                    <li><a href="500.html">500 Error</a></li>
-                                    <li><a href="maintenance.html">Maintenance</a></li>
-                                    <li><a href="coming-soon.html">Coming Soon</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
                 </ul>
             </div>
             <!-- Sidebar Navigation End -->

@@ -11,13 +11,13 @@ $title_current_page = "Admin";
                         <div class="panel">
                             <div class="profile--panel">
                                 <div class="img-wrapper" data-bg-img="../../assets/img/bg2.jpeg">
-                                    <div class="img online">
-                                        <img src="../../assets/img/profile.jpg" alt="profile.jpg" class="rounded-circle">
+                                    <div style="width: 100px !important;height:100px !important;border-radius:50%;display:block;margin:0 auto;">
+                                    <img style="width: 100px !important;height:100px !important;border-radius:50%;display:block" src="../uploads/banner_img/<?=$owner_image['settings_value']?>" alt="<?=$owner_image['settings_value']?>" class="rounded-circle">
                                     </div>
                                 </div>
 
                                 <div class="name">
-                                    <h3 class="h3">Shahinur Islam</h3>
+                                    <h3 class="h3"><?=$owner_name['settings_value']?></h3>
                                 </div>
 
                                 <div class="role">
