@@ -378,7 +378,7 @@ require_once "../includes/db.php";
                             ?>
 
                              <?php foreach($select_message_mysqli_query as $value): ?>
-                            <div id="msg_<?= $value['id']?>" class="btn_hiddien" style="display: none;">
+                            <div id="msg_<?= $value['id']?>" class="">
                             <div class="main-sender-info">
                                 <div class="main-sender-info__name">
                                     <img src="assets/img/avatars/03_80x80.png" alt="">
@@ -458,7 +458,7 @@ require_once "../includes/db.php";
 <script>
 // $('.btn_hiddien').css('display','none');
 
-$('.btn_hiddien').documents.getelementbyId ;
+// $('.btn_hiddien').documents.getelementbyId ;
 
 
 </script>

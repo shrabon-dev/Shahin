@@ -6,12 +6,12 @@ $title_current_page = "Blog List";
 
 <div class="m-2">
 <p style="text-align: right;"> 
-<?php if(isset( $_SESSION['Update_message'])): ?>
+<?php if(isset( $_SESSION['update_blog_status'])): ?>
 <span class="badge bg-primary p-1 text-white">
-<?=$_SESSION['Update_message']?>
+<?=$_SESSION['update_blog_status']?>
 </span>
 <?php endif; unset( $_SESSION['Update_message']) ?>
-<a href="./service_section.php" class="badge bg-orange p-2 text-white"><i class="fa fa-plus" aria-hidden="true"></i>Add Blog's</a>
+<a href="./blog_section.php" class="badge bg-orange p-2 text-white"><i class="fa fa-plus" aria-hidden="true"></i>Add Blog's</a>
 <a href="#" class="badge bg-primary p-2 text-white"><i class="fa fa-undo" aria-hidden="true"></i>Restore</a>
 </p>
 <table class="table table-dark table-striped">
@@ -33,7 +33,7 @@ $title_current_page = "Blog List";
 
             <td><?=$i++?></td>
             <td><?=$blog['blog_title']?></td>
-            <td style="width:500px;height:100px !important;overflow-y:scroll;display:inline-block"><?=$blog['blog_paragraph']?></td>
+            <td style="width:400px;height:100px !important;overflow-y:scroll;display:inline-block"><?=$blog['blog_paragraph']?></td>
             <td><img width="200" height="200" src="../uploads/blogs_image/<?=$blog['blog_image_name']?>" alt="<?=$blog['blog_image_name']?>"></td>
             <td><?=date("F j, Y",strtotime($blog['entry_date']))?></td>
             <td><?php if($blog['blogs_status']=='active'):?>

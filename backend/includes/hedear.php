@@ -215,6 +215,12 @@ $blog_lists = mysqli_query($db_connect,$blog_list_query);
                                     <span>Gallery</span>
                                 </a>
                             </li>
+                            <li>
+                                <a href="../pages/inbox.php">
+                                <i class="fas fa-comment"></i>
+                                    <span>Message</span>
+                                </a>
+                            </li>
                         </ul>
                     </li>
 

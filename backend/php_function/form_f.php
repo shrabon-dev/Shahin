@@ -56,13 +56,32 @@ if(empty($user_email)){
   mysqli_query($db_connect,"SET SESSION collation_connection ='utf8_unicode_ci'");
 
  
+
+$messageBody = "  ";
+
+
+
+$to_email = "shahinurislam.sm@gmail.com";
+$subject =  $message_subject;
+$body =  $message;
+$headers = "From:".$user_email;
+
+// if () {
+//     echo "Email successfully sent to $to_email...";
+// } else {
+//     echo "Email sending failed...";
+// }
+
+mail($to_email, $subject, $body, $headers);
+
+
   $_SESSION['user_message'] = 'Your message is received and very soon we will reply to you';
  
   header('location: ../../index.php');
 
 
 
-
  }
 
 ?>
+
