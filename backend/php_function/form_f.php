@@ -73,13 +73,9 @@ $headers = "From:".$user_email;
 // }
 
 mail($to_email, $subject, $body, $headers);
-
-
   $_SESSION['user_message'] = 'Your message is received and very soon we will reply to you';
  
   header('location: ../../index.php');
-
-
 
  }
 
