@@ -22,7 +22,7 @@
                 </div>
                 
                 <div class="download">
-                    <a href="#">Download Resume</a>
+                    <a href="./backend/uploads/Shahin CV 1page.pdf" download>Download Resume</a>
                 </div>
            </div></div>
            <div class="col-lg-6 m-auto"><div class="banner__img" data-aos="fade-left" data-aos-duration="1500">

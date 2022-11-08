@@ -1,5 +1,5 @@
    <!-- ================  footer section start  ==================== -->
-   <footer>
+   <footer id="footer">
        <div class="container">
         <div class="title" data-aos="zoom-out" data-aos-duration="1500">
             <h1>Contact</h1>

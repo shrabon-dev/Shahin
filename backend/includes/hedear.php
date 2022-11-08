@@ -138,21 +138,13 @@ $blog_lists = mysqli_query($db_connect,$blog_list_query);
 
                 <div class="profile--nav">
                     <ul class="nav">
-                        <li class="nav-item">
-                            <a href="profile.html" class="nav-link" title="User Profile">
-                                <i class="fa fa-user"></i>
-                            </a>
-                        </li>
+ 
                         <li class="nav-item">
                             <a href="../../index.php" target="_blank" class="nav-link" title="View site">
                                 <i class="fas fa-eye"></i>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="mailbox_inbox.html" class="nav-link" title="Messages">
-                                <i class="fa fa-envelope"></i>
-                            </a>
-                        </li>
+                   
                         <li class="nav-item">
                             <a href="../php_function/logout.php" class="nav-link" title="Logout">
                                 <i class="fa fa-sign-out-alt"></i>

@@ -66,11 +66,7 @@ $subject =  $message_subject;
 $body =  $message;
 $headers = "From:".$user_email;
 
-// if () {
-//     echo "Email successfully sent to $to_email...";
-// } else {
-//     echo "Email sending failed...";
-// }
+
 
 mail($to_email, $subject, $body, $headers);
   $_SESSION['user_message'] = 'Your message is received and very soon we will reply to you';

@@ -130,29 +130,29 @@ $owner_contact_number =  mysqli_fetch_assoc(mysqli_query($db_connect,$owner_cont
    <!-- ================  navbar section start  ==================== -->
    <nav class="navbar navbar-expand-lg menu" data-aos="fade-down" data-aos-duration="1500">
     <div class="container">
-      <a class="navbar-brand" href="#">Sultan</a>
+      <a class="navbar-brand" href="index.php">Sultan</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"><img src="images/font/001-menu.png" alt="font/001-menu.png"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav m-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="index.php">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">About me</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Services</a>
+            <a class="nav-link" href="#services__section">Services</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">My works</a>
+            <a class="nav-link" href="#portfolio__section">My works</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Dowload Resume</a>
+            <a class="nav-link" href="#Blog__section">Blog's</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contact me</a>
+            <a class="nav-link" href="#footer">Contact me</a>
           </li>
         </ul>
         <div class="hire__me ms-auto">
